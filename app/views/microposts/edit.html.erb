@@ -1,0 +1,35 @@
+<h1>Editing micropost</h1>
+ 
+<%= form_for :micropost, url: micropost_path(@micropost), method: :patch do |f| %>
+ 
+  <% if @micropost.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@micropost.errors.count, "error") %> prohibited
+        this micropost from being saved:
+      </h2>
+      <ul>
+        <% @micropost.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </p>
+ 
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.text_area :user_id %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', microposts_path %>

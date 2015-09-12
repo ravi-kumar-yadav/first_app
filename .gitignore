@@ -21,3 +21,6 @@
 
 .project
 .DS_Store
+
+# Ignore tests for now
+/test
