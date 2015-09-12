@@ -12,8 +12,6 @@
 !/log/.keep
 /tmp
 
-# Ignore database files
-/db
 
 # Ignore all temporary files
 *~
