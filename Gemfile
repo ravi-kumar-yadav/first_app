@@ -5,6 +5,8 @@ ruby '2.0.0'
 # Manually Added GEMs
 gem 'heroku'
 gem 'rails_12factor'
+gem 'rspec-rails'
+gem 'capybara', '~> 2.5.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -48,4 +50,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
