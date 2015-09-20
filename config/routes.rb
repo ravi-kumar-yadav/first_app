@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/home'
-  get 'static_pages/help'
-  get 'static_pages/about'
-  get 'static_pages/contact'
+  ### Older format of writing Routes
+  # get 'static_pages/home'
+  # get 'static_pages/help'
+  # get 'static_pages/about'
+  # get 'static_pages/contact'
+
+  ### New format of writing Routes
+  # we get <path>_path variables for each get defined below
+  # or it can be explicity defined by using 'as:' key-value pair
+  # ￼about_path => '/about'
+  # about_url =>'http://localhost:3000
+  root to: 'static_pages#home', as: :root
+  get '/help'     , to: 'static_pages#help'
+  get '/about'    , to: 'static_pages#about', as: :about
+  get '/contact'  , to: 'static_pages#contact'
+
 
   resources :users
   resources :microposts
@@ -12,7 +24,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#home'
+  # root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
