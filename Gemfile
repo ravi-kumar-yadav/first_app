@@ -5,6 +5,8 @@ ruby '2.0.0'
 # Manually Added GEMs
 gem 'heroku'
 gem 'rails_12factor'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 #RSpec test suite
 gem 'rspec-rails'
@@ -14,8 +16,8 @@ gem 'capybara', '~> 2.5.0'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# # Use SCSS for stylesheets
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
