@@ -9,13 +9,15 @@ Rails.application.routes.draw do
   ### New format of writing Routes
   # we get <path>_path variables for each get defined below
   # or it can be explicity defined by using 'as:' key-value pair
+  # we get following two additional variables to work with (*_path and *_url)
   # ￼about_path => '/about'
   # about_url =>'http://localhost:3000
-  root to: 'static_pages#home', as: :root
+  root              to: 'static_pages#home',    as: :root
   get '/help'     , to: 'static_pages#help'
-  get '/about'    , to: 'static_pages#about', as: :about
+  get '/about'    , to: 'static_pages#about',   as: :about
   get '/contact'  , to: 'static_pages#contact'
 
+  get '/signup'   , to: 'users#new'
 
   resources :users
   resources :microposts

@@ -3,10 +3,15 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Manually Added GEMs
-gem 'heroku'
+# gem 'heroku'
 gem 'rails_12factor'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+
+
+gem 'pry'
+gem 'pry-rails'
+gem 'pry-byebug'
 
 #RSpec test suite
 gem 'rspec-rails'
